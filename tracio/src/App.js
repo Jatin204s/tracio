@@ -1,13 +1,18 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Dashboard from './Pages/Dashboard/Dashboard';
+import Layout from './Components/Layout/Layout';
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-     
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" index element={<Dashboard />} />
+        </Route>
+      </Routes>
+    </>
   );
 }
 
